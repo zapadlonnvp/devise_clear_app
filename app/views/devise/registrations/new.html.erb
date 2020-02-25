@@ -6,6 +6,7 @@
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<i class="fas fa-envelope-square"></i>
   </div>
 
   <div class="field">
@@ -14,6 +15,7 @@
     <em><%= I18n.t 'devise.shared.minimum_password_length', count: @minimum_password_length  %></em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+    <i class="fas fa-key"></i>
   </div>
 
   <div class="field">
