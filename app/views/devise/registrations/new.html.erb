@@ -21,7 +21,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control input" %>
   </div>
   <div class="actions">
-    <%= f.submit I18n.t('devise.registrations.new.sign_up'), class: "btn-primary" %>
+    <%= f.submit I18n.t('devise.registrations.new.sign_up'), class: "btn btn-primary", style: "margin-top: 5px" %>
   </div>
   <%= render "devise/shared/links" %>
 <% end %>
