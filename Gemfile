@@ -11,7 +11,7 @@ gem 'carrierwave'
 gem 'rmagick'
 
 # Гем для работы carrierwave с хранилищем Amazon S3
-gem 'fog-aws'
+gem 'fog'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
