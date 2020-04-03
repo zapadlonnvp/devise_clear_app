@@ -5,6 +5,13 @@ ruby '2.6.5'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'russian'
+gem 'carrierwave'
+
+# Гем для обработки картинок
+gem 'rmagick'
+
+# Гем для работы carrierwave с хранилищем Amazon S3
+gem 'fog-aws'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
@@ -13,7 +20,9 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'puma', '~> 4.1'
 gem 'devise-i18n'
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+gem 'sass-rails'
+gem 'uglifier'
+# gem 'coffee-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
