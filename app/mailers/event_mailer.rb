@@ -5,7 +5,7 @@ class EventMailer < ApplicationMailer
   #
   #   en.event_mailer.subscription.subject
   #
-  def subscription
+  def subscription(event, subscription)
     @email = subscription.user_email
     @name = subscription.user_name
     @event = event
@@ -20,10 +20,10 @@ class EventMailer < ApplicationMailer
   #
   #   en.event_mailer.comment.subject
   #
-  def comment
+  def comment(event, comment, mail)
     @comment = comment
     @event = event
 
-    mail to: email, subject: "Новый комментарий @ #{event.title}"
+    mail to: mail, subject: "Новый комментарий @ #{event.title}"
   end
 end
