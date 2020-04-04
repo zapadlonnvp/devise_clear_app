@@ -124,7 +124,7 @@ Rails.application.configure do
 
   # А это для SendGrid
   ActionMailer::Base.smtp_settings = {
-      domain:         'heroku.com',
+      domain:         'devise533.herokuapp.com',
       address:        'smtp.sendgrid.net',
       port:           '587',
       authentication: :plain,
