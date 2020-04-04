@@ -64,7 +64,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address: 'smtp.gmail.com',
       port: '587',
-      domain: 'google.com'
+      domain: 'google.com',
       user_name: 'lesson57mailer@gmail.com', # не используйте для тестов свои реальные ящики
       password: 'Watson22',
       authentication: 'plain',
