@@ -10,7 +10,11 @@ class CommentsController < ApplicationController
 
   def create
     @new_comment = @event.comments.build(comment_params)
-    @new_comment.user = current_user
+    if current_user.present?
+      @new_comment.user = current_user
+    else
+      @new_comment.user = user_name
+    end
 
     if @new_comment.save
       # уведомляем всех подписчиков о новом комментарии

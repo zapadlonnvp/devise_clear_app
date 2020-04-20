@@ -43,10 +43,8 @@
       </div>
 
       <div class="event-comments buffer-top">
-        <% unless current_user_can_edit?(@event) %>
           <%= render partial: 'comments/form',
                      locals: {comment: @new_comment || @event.comments.build} %>
-        <% end %>
         <div class="buffer-both">
           <%= render partial: 'comments/comment',
                      collection: @event.comments.except(@new_comment) %>
