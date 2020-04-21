@@ -1,15 +1,12 @@
-# (с) goodprogrammer.ru
-#
-# Модель Коммента
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  validates  :event, presence: true
   validates :body, presence: true
 
-  # поле должно быть, только если не выполняется user.present? (у объекта на задан юзер)
   validates :user_name, presence: true, unless: -> { user.present? }
+
+  scope :newest_first, -> { order(created_at: :desc) }
 
   def user_name
     if user.present?
