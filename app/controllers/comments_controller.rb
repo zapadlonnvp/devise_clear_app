@@ -10,11 +10,7 @@ class CommentsController < ApplicationController
 
   def create
     @new_comment = @event.comments.build(comment_params)
-    if current_user.present?
-      @new_comment.user = current_user
-    else
-      @new_comment.user = user_name
-    end
+    @new_comment.user = current_user
 
     if @new_comment.save
       # уведомляем всех подписчиков о новом комментарии
@@ -39,6 +35,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def set_event
     @event = Event.find(params[:event_id])
   end
