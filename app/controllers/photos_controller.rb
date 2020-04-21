@@ -59,7 +59,7 @@ class PhotosController < ApplicationController
 
   def notify_subscribers(photo)
     # Собираем всех подписчиков и автора события в массив мэйлов, исключаем повторяющиеся
-    all_emails = (photo.event.subscriptions.map(&:user_email) + [photo.event.user.email]).uniq
+    all_emails = (photo.event.subscriptions.map(&:user_email) + [photo.event.user.email] - [photo.user.email]).uniq
 
     # По адресам из этого массива делаем рассылку
     # Как и в подписках, берём EventMailer и его метод comment с параметрами
