@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-md-12">
       <% if @user.events.any? %>
-        <h3>Организовал:</h3>
+        <h3>Замутил:</h3>
         <div class="row">
           <%= render partial: 'events/event', collection: @user.events %>
         </div>
