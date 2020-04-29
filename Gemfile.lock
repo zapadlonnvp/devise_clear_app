@@ -123,6 +123,7 @@ GEM
     ipaddress (0.8.3)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    lightbox-bootstrap-rails (5.1.0.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -269,6 +270,7 @@ DEPENDENCIES
   fog-aws
   font-awesome-rails
   jbuilder (~> 2.7)
+  lightbox-bootstrap-rails
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 4.1)

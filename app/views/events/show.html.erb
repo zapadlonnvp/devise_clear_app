@@ -37,9 +37,11 @@
         </div>
 
         <%# Рисуем форму для добавления новой фотографии %>
+        <% if user_signed_in? %>
         <div class="event-photo-form">
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>
+        <% end %>
       </div>
 
       <div class="event-comments buffer-top">
@@ -67,7 +69,7 @@
         </div>
       </div>
       <div class="event-subscription-form">
-        <h4>Я пойду:</h4>
+<!--        <h4>Я пойду:</h4>-->
         <div>
           <%= render partial: 'subscriptions/form', locals: {
               subscription: @new_subscription || @event.subscriptions.build
@@ -77,3 +79,4 @@
     </div>
   </div>
 </div>
+
